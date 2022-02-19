@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  div.slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: lightgray;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .container{
+    background-color: honeydew;
+    border-radius: 10px;
+    height: 70%;
+    width: 25%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .headr{
+    display: flex;
+    padding-top: 15%;
+    justify-content: center;
+    align-items: center;
   }
-}
+
+  .headr img{
+    width: 40%;
+    height: 40%;
+    border: 1px solid black;
+    border-radius: 50%;
+  }
+
+  .headr h1{
+    padding-left: 10px;
+    font-family: cursive;
+  }
+
+  .fom{
+    padding-top: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  input{
+    font-size: 15px;
+    width: 90%;
+    background-color: lightblue;
+    font-family: monospace;
+    padding : 8px;
+    border-radius: 5px;
+  }
+
+  #email{
+    margin-bottom: 20px;
+  }
+
+  input.sub{
+    width: 40%;
+    margin-top: 15%;
+    cursor: pointer;
+  }
+
+  input.sub:hover{
+    background-color: skyblue;
+    border-color: gray;
+    color: blueviolet;
+    font-weight: bolder;
+    border: 1px solid seagreen;
+    border-style: outset;
+  }
+
+  .tog{
+    position: absolute;
+  }
+
+  #tg{
+    position: absolute;
+    right : -100px;
+    transform: (0,-50%);
+    top: 25%;
+    cursor: pointer;
+  }
