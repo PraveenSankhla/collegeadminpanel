@@ -1,5 +1,6 @@
 import './App.css';
-import { useState } from "react";
+import { useState, useEffect} from "react";
+import fire from './fire'
 
 function App() {
   const [passwordShown, setPasswordShown] = useState(false);
@@ -9,54 +10,60 @@ function App() {
 
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
+const [hasAccount, setHasAccount] = useState(false);
 
-const [allEntry, setAllEntry]= useState([]);
+const handleLogin = () =>{
+  fire
+  .auth
+  .signInWithEmailAndPassword(email, password)
+  .catch(err =>{
+    
+  })
+}
+// const [allEntry, setAllEntry]= useState([]);
 
-const submitform = (e) =>{
-  e.preventDefault();
-  const newEntry = {
-    email : email,
-    password : password
-  }
+// const submitform = (e) =>{
+//   e.preventDefault();
+//   const newEntry = {
+//     email : email,
+//     password : password
+//   }
 
-  setAllEntry([...allEntry, newEntry]);
+//   setAllEntry([...allEntry, newEntry]);
   // console.log(allEntry)
 
-  if(newEntry.email=="pk54451636465@gmail.com"){
-    return(
-      <div>
-        <a href='https://collegeproject-27765.web.app/'></a>
-      </div>
-    )
-  }
-  else{
-    print("enter Valid login Info")
-  }
-}
+//   const submitform = ()=>{
+//   if(email=="pk54451636465@gmail.com"){
+//     return(
+//       <div>
+//       console.log("hello")
+//       </div>
+//     )
+//   }
+//   else{
+//     console.log("enter Valid login Info")
+//   }
+// }
   
   return (
     <>
-    <form action='' onSubmit={submitform}>
     <div className='slider'>
       <div className='container'>
-        <div className='headr'>
+        <div className='header'>
           <img src='./img/01.png'></img>
           <h1> SignUp</h1>
         </div>
-        <div className='fom'>
-        <input type='email' placeholder='E-mail' name='email' id='email' value={email}
-        onChange={(e)=>setEmail(e.target.value)}></input>
-        <div className='tog'>
-        <input type={passwordShown ? "text" : "password"} placeholder='Password' id='password' value={password}
-        onChange={(e)=>setPassword(e.target.value)}>
+      <form>
+        <input type='email' placeholder='E-mail' name='email' id='email'></input>
+        {/* <div className='toggle'> */}
+        <input type={passwordShown ? "text" : "password"} placeholder='Password' id='password'>
         </input>
         <input type="checkbox" onClick={togglePassword} id='tg'></input>
-        </div>
+        {/* </div> */}
         <input type='submit' value='Submit' className='sub' id='submit'></input>
-        </div>
+        </form>
       </div>
     </div>
-    </form>
     </>
   );
 }

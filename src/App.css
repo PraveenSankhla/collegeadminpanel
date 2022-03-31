@@ -10,35 +10,36 @@
     background-color: honeydew;
     border-radius: 10px;
     height: 70%;
-    width: 25%;
+    width: 30%;
     display: flex;
     /* justify-content: center; */
     align-items: center;
     flex-direction: column;
   }
 
-  .headr{
+  .header{
     display: flex;
     padding-top: 15%;
     justify-content: center;
     align-items: center;
   }
 
-  .headr img{
+  .header img{
     width: 40%;
     height: 40%;
     border: 1px solid black;
     border-radius: 50%;
   }
 
-  .headr h1{
+  .header h1{
     padding-left: 10px;
     font-family: cursive;
   }
 
-  .fom{
+  form{
     padding-top: 15%;
     display: flex;
+    width: 65%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -58,7 +59,7 @@
   }
 
   input.sub{
-    width: 40%;
+    width: 50%;
     margin-top: 15%;
     cursor: pointer;
   }
@@ -72,14 +73,13 @@
     border-style: outset;
   }
 
-  .tog{
+  .toggle{
     position: absolute;
   }
 
   #tg{
     position: absolute;
-    right : -100px;
-    transform: (0,-50%);
+    right : -35%;
     top: 25%;
     cursor: pointer;
   }
